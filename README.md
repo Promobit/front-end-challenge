@@ -73,7 +73,7 @@ No Promobit, valorizamos muito feedbacks. Acreditamos que o feedback é essencia
 
 ## Dúvidas
 
-Caso haja qualquer dúvida sobre o teste, nos envie um email para devs@promobit.com.br com o título: [Frontend Challengue] O assunto desejado
+Caso haja qualquer dúvida sobre o teste, nos envie um email para devs@promobit.com.br com o título: [Frontend Challenge] O assunto desejado
 
 ---
 Obrigado e bom desafio!

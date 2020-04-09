@@ -15,7 +15,7 @@ Temos insights que nos dizem que os usuários dessa lista costumam ter uma melho
 
 Para garantir que o usuário encontre o filme que está procurando, essa lista deverá ser paginada sempre que não existir nenhum filtro de gênero ativo.
 
-### Referencias para consulta
+### Referências para consulta
 * https://developers.themoviedb.org/3/movies/get-popular-movies
 * https://developers.themoviedb.org/3/genres/get-movie-list
 
@@ -55,7 +55,7 @@ Para garantir que o usuário encontre o filme que está procurando, essa lista d
 - Boas práticas de desenvolvimento como: testes, design patterns, clean code
 - Domínio das ferramentas e linguagens que compõe um app frontend moderno
 - Conhecimento em áreas adjacentes ao frontend, como DevSecOps e UX aplicadas ao desafio
-- Documentação: explicação para construir o app localmente, histórico e worflow de `git`
+- Documentação: explicação para construir o app localmente, histórico e workflow de `git`
 
 ## Entrega
 

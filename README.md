@@ -21,27 +21,27 @@ Para garantir que o usuário encontre o filme que está procurando, essa lista d
 
 ## Requisitos funcionais
 
-* [ ] - O usuário deve ter acesso a uma listagem dos filmes mais populares do dia
+* [ ] O usuário deve ter acesso a uma listagem dos filmes mais populares do dia
 
-* [ ] - O usuário deve conseguir paginar a lista para encontrar novos filmes
+* [ ] O usuário deve conseguir paginar a lista para encontrar novos filmes
 
-* [ ] - O usuário deve conseguir filtrar os filmes listados por gênero
+* [ ] O usuário deve conseguir filtrar os filmes listados por gênero
 
-* [ ] - Ao realizar um filtro, a paginação deve ser desabilitada
+* [ ] Ao realizar um filtro, a paginação deve ser desabilitada
 
-* [ ] - O usuário deve conseguir remover o filtro e a paginação deverá voltar a funcionar
+* [ ] O usuário deve conseguir remover o filtro e a paginação deverá voltar a funcionar
 
 ## Requisitos não funcionais
 
-* [ ] - O app deverá ser hospedado em um serviço de armazenamento de conteúdo estático, como, por exemplo: [Surge](https://surge.sh/), [Netlify](https://www.netlify.com/), [ZEIT](https://zeit.co/home)
+* [ ] O app deverá ser hospedado em um serviço de armazenamento de conteúdo estático, como, por exemplo: [Surge](https://surge.sh/), [Netlify](https://www.netlify.com/), [ZEIT](https://zeit.co/home)
 
-* [ ] - O app deverá ser criado usando uma lib ou framework para construção de UIs moderno, como: [React](https://reactjs.org/), [Vue](https://vuejs.org/), [Preact](https://preactjs.com/)
+* [ ] O app deverá ser criado usando uma lib ou framework para construção de UIs moderno, como: [React](https://reactjs.org/), [Vue](https://vuejs.org/), [Preact](https://preactjs.com/)
 
-* [ ] - Na raiz do projeto, será necessário incluir um arquivo `README.md` com as instruções para construir seu projeto localmente
+* [ ] Na raiz do projeto, será necessário incluir um arquivo `README.md` com as instruções para construir seu projeto localmente
 
-* [ ] - O app deverá se comportar da mesma forma na última versão estável dos seguintes browsers: Chrome, Firefox, Edge
+* [ ] O app deverá se comportar da mesma forma na última versão estável dos seguintes browsers: Chrome, Firefox, Edge
 
-* [ ] - O app deverá ser responsivo
+* [ ] O app deverá ser responsivo
 
 ## Extras
 

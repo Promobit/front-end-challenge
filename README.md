@@ -61,7 +61,7 @@ Para garantir que o usuário encontre o filme que está procurando, essa lista d
 
 Para realizar a entrega do desafio, você deverá enviar um email para devs@promobit.com.br com o título `[Frontend Challenge] Seu nome - desafio finalizado` com o link para seu app e outro para o repósitório com seu código. Exemplo:
 
-https://link-para-o-app
+https://link-para-o-app  
 https://github.com/seu-nome/front-end-challenge.git
 
 Não se esqueça de criar um arquivo `README.md` contendo as instruções para construir o app localmente.

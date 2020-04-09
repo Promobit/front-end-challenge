@@ -15,8 +15,8 @@ Para a entrega do desafio, você deverá criar uma issue nesse mesmo repositóri
 
 ## Requisitos não funcionais
 
- - [] - O app deverá ser hospedado em um servico de armazenamento de conteúdo estático, como: [Surge](https://surge.sh/), [Netlify](https://www.netlify.com/), [ZEIT](https://zeit.co/home)
- - [] - O app deverá ser criado usando uma lib ou framework para construção de UIs, como: [React](https://reactjs.org/), [Vue](https://vuejs.org/), [Preact](https://preactjs.com/),
+ - [] - O app deverá ser hospedado em um serviço de armazenamento de conteúdo estático, como: [Surge](https://surge.sh/), [Netlify](https://www.netlify.com/), [ZEIT](https://zeit.co/home)
+ - [] - O app deverá ser criado usando uma lib ou framework para construção de UIs, como: [React](https://reactjs.org/), [Vue](https://vuejs.org/), [Preact](https://preactjs.com/)
 
 ## Extras
 

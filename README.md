@@ -1,5 +1,7 @@
 <img src="https://i.imgur.com/6q2AiRg.png" width="500">
 
+**ATENÇÃO: O processo seletivo ligado a esse desafio já acabou e não estamos contratando desenvolvedores front-end no momento. Caso queira fazer o teste e nos enviar, fique à vontade. Nós nos certificaremos de enviar um feedback e, dependendo do resultado, entraremos em contato assim que tivermos posições.**
+
 # Introdução
 
 Olá! Obrigado pelo interesse em participar do nosso processo seletivo para dev frontend no [Promobit](https://www.promobit.com.br/).
@@ -68,7 +70,7 @@ Não se esqueça de criar um arquivo `README.md` contendo as instruções para c
 
 ## Feedback
 
-No Promobit, valorizamos muito feedbacks. Acreditamos que o feedback é essencial para melhorar, aprender e facilitar processos. Dessa forma, assim que o seu desafio for submetido, prometemos enviar um feedback técnico em até uma semana explicando todos os pontos que acreditamos ser relevantes.
+No Promobit, valorizamos muito feedbacks. Acreditamos que o feedback é essencial para melhorar, aprender e facilitar processos. Dessa forma, assim que o seu desafio for submetido, prometemos enviar um feedback técnico em até uma semana usando todos os critérios de avaliação descritos acima.
 
 ## Dúvidas
 

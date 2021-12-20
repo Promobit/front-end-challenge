@@ -12,7 +12,7 @@ Usando a API de filmes gratuita [themoviedb](https://developers.themoviedb.org/3
 
 Para garantir que o usuário encontre o filme que está procurando, essa lista deverá ser paginada.
 
-Siga o layout do figma sugerido. Não há necessidade de ser pixel perfect mas respeite a composição, fontes e cores.
+Siga o [layout do figma](https://www.figma.com/file/rM7WPqhLY9ObnGzSCeWLxB/Teste-Front-End) sugerido. Não há necessidade de ser pixel perfect mas respeite a composição, fontes e cores.
 
 ## Requisitos funcionais
 
@@ -36,7 +36,7 @@ Siga o layout do figma sugerido. Não há necessidade de ser pixel perfect mas r
 
 ## Extras
 
-Temos insights que nos levam a acreditar que os usuários dessa lista costumam ter uma experiência melhor se conseguirem criar um filtro usando seus genêros favoritos. Portanto, você também poderá criar filtros de filmes por gênero nessa listagem. Note que um novo endpoint deverá ser consultado para obter uma lista dos possíveis gêneros a serem filtrados, [`GET /genre/movie/list`](https://developers.themoviedb.org/3/genres/get-movie-list).
+Temos insights que nos levam a acreditar que os usuários dessa lista costumam ter uma experiência melhor se conseguirem criar um filtro usando seus gêneros favoritos. Portanto, você também poderá criar filtros de filmes por gênero nessa listagem. Note que um novo endpoint deverá ser consultado para obter uma lista dos possíveis gêneros a serem filtrados, [`GET /genre/movie/list`](https://developers.themoviedb.org/3/genres/get-movie-list).
 
 * [ ] O usuário deve conseguir filtrar os filmes listados por gênero, com a possibilidade de usar mais de um gênero
 * [ ] O usuário deve conseguir remover filtros e a listagem deve ser atualizada de acordo com o filtro removido
@@ -50,7 +50,7 @@ Temos insights que nos levam a acreditar que os usuários dessa lista costumam t
 
 ## Entrega
 
-Para realizar a entrega do desafio, você deverá enviar um email para devs@promobit.com.br com o título `[Frontend Challenge] Seu nome` com o link para o repósitório com seu código. Exemplo:
+Para realizar a entrega do desafio, você deverá enviar um email para devs@promobit.com.br com o título `[Frontend Challenge] Seu nome` com o link para o repositório com seu código. Exemplo:
 
 https://github.com/seu-nome/front-end-challenge.git
 

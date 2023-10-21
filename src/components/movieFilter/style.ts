@@ -10,6 +10,11 @@ export const MovieFilterContent = styled.div`
   margin: 0 auto;
   padding: 4rem 8rem;
   text-align: center;
+
+  @media (max-width: 600px) {
+    padding: 3rem 1rem;
+    text-align: start;
+  }
 `;
 
 export const TitleComponent = styled.h1`
@@ -22,4 +27,8 @@ export const GenreList = styled.nav`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  @media (max-width: 600px) {
+    justify-content: start;
+  }
 `;

@@ -13,7 +13,7 @@ export const MovieListPage = () => {
     genresSelecteds,
     handleSetGenresSelected,
   } = useGenres();
-  const { handleFetchAllMovies, movies, pagination } = useMovie();
+  const { handleFetchAllMovies, list, pagination } = useMovie();
 
   useEffect(() => {
     const genresFromSearch = getFromSearchParams(location.search, "genres");
@@ -35,7 +35,7 @@ export const MovieListPage = () => {
     <>
       <Header />
       <MovieFilter genres={genres} genresSelecteds={genresSelecteds} />
-      <MovieList movies={movies} />
+      <MovieList movies={list} />
       <Pagination
         currentPage={pagination.currentPage}
         totalPage={pagination.totalPages}

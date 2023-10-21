@@ -21,3 +21,9 @@ export function formatDate(date: string) {
 
   return `${day} ${months[month]} ${year}`;
 }
+
+export function getGenresFromSearchParams(search: string): string | null {
+  const searchParams = new URLSearchParams(search);
+  const genres = searchParams.get("genres");
+  return genres;
+}

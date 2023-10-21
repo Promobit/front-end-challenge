@@ -1,10 +1,10 @@
 import { toast } from "react-toastify";
 import { getCreditsMovie, getMovieById, getPopularMovies } from "../api/movie";
 import { useDispatch, useSelector } from "react-redux";
-import { setList, setMovie } from "../store/movie/action";
+import { setCast, setList, setMovie } from "../store/movie/action";
 import { useState } from "react";
 import { RootState } from "../store/store";
-import { Movie } from "../helpers/interfaces/movie";
+import { Cast, Movie } from "../helpers/interfaces/movie";
 import {
   convertMinutesToHours,
   formatDate,
@@ -14,6 +14,7 @@ import {
 export const useMovie = () => {
   const list = useSelector((state: RootState) => state.movie.list);
   const movie = useSelector((state: RootState) => state.movie.movie);
+  const cast = useSelector((state: RootState) => state.movie.casts);
 
   const dispatch = useDispatch();
 
@@ -78,7 +79,6 @@ export const useMovie = () => {
           }))
           .sort((a: any, b: any) => a.job.localeCompare(b.job));
 
-        console.log(movieResponse.data);
         dispatch(setMovie(movieResponse.data));
       }
     } catch (error) {
@@ -86,12 +86,31 @@ export const useMovie = () => {
     }
   };
 
+  const handleFetchCast = async (movie_id: string | undefined) => {
+    try {
+      if (movie_id) {
+        const castResponse = (await getCreditsMovie(movie_id)).data;
+        castResponse.cast = castResponse.cast.map((cast: Cast) => ({
+          name: cast.name,
+          character: cast.character,
+          profile_path: `https://image.tmdb.org/t/p/w500${cast.profile_path}`,
+        }));
+
+        dispatch(setCast(castResponse.cast));
+      }
+    } catch (error) {
+      toast.error("Erro ao buscar elenco do filme!");
+    }
+  };
+
   return {
     list,
     movie,
+    cast,
     loading,
     pagination: { totalPages, currentPage },
     handleFetchAllMovies,
     handleFetchMovieById,
+    handleFetchCast,
   };
 };

@@ -67,3 +67,9 @@ export interface MovieDetail {
   vote_count: number;
   jobs: Jobs[];
 }
+
+export interface Cast {
+  character: string;
+  name: string;
+  profile_path: string;
+}

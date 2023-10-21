@@ -9,6 +9,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
   }
 
+  body, html {
+    background-color: #F3F3F3;
+  }
+  
   h1 {
     color: ${theme.colors.textWhite};
     font-size: 34px;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const CastListComponent = styled.section`
   max-width: 1260px;
-  margin: 5rem auto;
+  margin: 4rem auto;
   padding: 4rem 8rem;
 
   @media (max-width: 600px) {

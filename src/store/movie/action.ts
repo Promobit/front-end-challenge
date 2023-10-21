@@ -22,7 +22,7 @@ export const setCast = (cast: Cast) => ({
   payload: cast,
 });
 
-export const setTrailer = (trailer: string) => ({
+export const setTrailer = (trailer: string | boolean) => ({
   type: SET_TRAILER,
   payload: trailer,
 });

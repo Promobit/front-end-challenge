@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import theme from "../../theme/theme";
 
-export const HeaderComponent = styled.nav`
+export const HeaderComponent = styled.header`
   background-color: ${theme.colors.primary};
   padding: 14px;
 `;

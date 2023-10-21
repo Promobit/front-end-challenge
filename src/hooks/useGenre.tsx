@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store/store";
 import { getGenres } from "../api/genre";
-import { setGenres } from "../store/genre/actions";
+import { selectGenres, setGenres } from "../store/genre/actions";
 
 export const useGenres = () => {
   const dispatch = useDispatch();
@@ -11,6 +11,9 @@ export const useGenres = () => {
   const [loading, setLoading] = useState(false);
 
   const genres = useSelector((state: RootState) => state.genre.list);
+  const genresSelecteds = useSelector(
+    (state: RootState) => state.genre.genresSelected
+  );
 
   const handleFetchGenres = async () => {
     try {
@@ -27,9 +30,20 @@ export const useGenres = () => {
     }
   };
 
+  const handleSetGenresSelected = async (genres: string | null) => {
+    if (genres) {
+      const genres_id = genres.split(",").map(Number);
+      dispatch(selectGenres(genres_id));
+    } else {
+      dispatch(selectGenres([]));
+    }
+  };
+
   return {
     genres,
     loading,
     handleFetchGenres,
+    genresSelecteds,
+    handleSetGenresSelected,
   };
 };

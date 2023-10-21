@@ -20,7 +20,7 @@ export const MovieDetailsContent = styled.div`
     padding: 3rem 1rem;
     display: block;
     margin: 0px;
-    max-height: 100vh;
+    max-height: 150vh;
     text-align: center;
 
     & > img {

@@ -2,16 +2,16 @@ import { AnyAction } from "redux";
 import { SELECT_GENRES, SET_GENRES } from "./type";
 
 const initialState = {
-  genres: [],
+  list: [],
   genresSelected: [],
 };
 
-export const genresReducer = (state = initialState, action: AnyAction) => {
+export const genreReducer = (state = initialState, action: AnyAction) => {
   switch (action.type) {
     case SET_GENRES:
       return {
         ...state,
-        genres: action.payload,
+        list: action.payload,
       };
     case SELECT_GENRES:
       return {

@@ -3,10 +3,17 @@ import {
   getCreditsMovie,
   getMovieById,
   getPopularMovies,
+  getRecommendationsMovie,
   getTrailerMovie,
 } from "../api/movie";
 import { useDispatch, useSelector } from "react-redux";
-import { setCast, setList, setMovie, setTrailer } from "../store/movie/action";
+import {
+  setCast,
+  setList,
+  setMovie,
+  setRecommendations,
+  setTrailer,
+} from "../store/movie/action";
 import { useState } from "react";
 import { RootState } from "../store/store";
 import { Cast, Movie } from "../helpers/interfaces/movie";
@@ -21,6 +28,9 @@ export const useMovie = () => {
   const movie = useSelector((state: RootState) => state.movie.movie);
   const cast = useSelector((state: RootState) => state.movie.casts);
   const trailer = useSelector((state: RootState) => state.movie.trailer);
+  const recommendations = useSelector(
+    (state: RootState) => state.movie.recommendations
+  );
 
   const dispatch = useDispatch();
 
@@ -126,16 +136,39 @@ export const useMovie = () => {
     }
   };
 
+  const handleFetchRecommendationsMovie = async (
+    movie_id: string | undefined
+  ) => {
+    try {
+      if (movie_id) {
+        const recommendationsResponse = (
+          await getRecommendationsMovie(movie_id)
+        ).data;
+
+        recommendationsResponse.results.map(
+          (movie: Movie) => (
+            (movie.poster_path = `https://image.tmdb.org/t/p/w500${movie.poster_path}`),
+            (movie.release_date = formatDate(movie.release_date))
+          )
+        );
+        dispatch(setRecommendations(recommendationsResponse.results));
+      }
+    } catch (error) {
+      toast.error("Erro ao buscar recomendações!");
+    }
+  };
   return {
     list,
     movie,
     cast,
     loading,
     trailer,
+    recommendations,
     pagination: { totalPages, currentPage },
     handleFetchAllMovies,
     handleFetchMovieById,
     handleFetchCast,
     handleFetchTrailerMovie,
+    handleFetchRecommendationsMovie,
   };
 };

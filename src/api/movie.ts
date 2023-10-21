@@ -13,3 +13,6 @@ export const getCreditsMovie = (movie_id: string) =>
 
 export const getTrailerMovie = (movie_id: string) =>
   axiosInstance.get(`movie/${movie_id}/videos`);
+
+export const getRecommendationsMovie = (movie_id: string) =>
+  axiosInstance.get(`movie/${movie_id}/recommendations`);

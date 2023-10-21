@@ -1,9 +1,11 @@
 import { applyMiddleware, combineReducers, createStore } from "redux";
 import thunk from "redux-thunk";
-import { genresReducer } from "./genre/reducer";
+import { genreReducer } from "./genre/reducer";
+import { movieReducer } from "./movie/reducer";
 
 const rootReducer = combineReducers({
-  genres: genresReducer,
+  genre: genreReducer,
+  movie: movieReducer,
 });
 
 export const store = createStore(rootReducer, applyMiddleware(thunk));

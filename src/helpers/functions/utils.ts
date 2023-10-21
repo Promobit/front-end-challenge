@@ -22,8 +22,11 @@ export function formatDate(date: string) {
   return `${day} ${months[month]} ${year}`;
 }
 
-export function getGenresFromSearchParams(search: string): string | null {
+export function getFromSearchParams(
+  search: string,
+  param: string
+): string | null {
   const searchParams = new URLSearchParams(search);
-  const genres = searchParams.get("genres");
+  const genres = searchParams.get(param);
   return genres;
 }

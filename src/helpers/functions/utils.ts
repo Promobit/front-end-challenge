@@ -22,6 +22,25 @@ export function formatDate(date: string) {
   return `${day} ${months[month]} ${year}`;
 }
 
+export function formatDateForRelease(date: string) {
+  const dates = date.split("-");
+  const day = dates[2];
+  const month = dates[1];
+  const year = dates[0];
+
+  return `${day}/${month}/${year}`;
+}
+
+export function convertMinutesToHours(minutes: number): string {
+  const hours: number = Math.floor(minutes / 60);
+  const remainingMinutes: number = minutes % 60;
+
+  const formattedHours: string = hours.toString().padStart(2, "0");
+  const formattedMinutes: string = remainingMinutes.toString().padStart(2, "0");
+
+  return `${formattedHours}h${formattedMinutes}`;
+}
+
 export function getFromSearchParams(
   search: string,
   param: string

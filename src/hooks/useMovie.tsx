@@ -1,14 +1,15 @@
 import { toast } from "react-toastify";
-import { getPopularMovies } from "../api/movie";
+import { getMovieById, getPopularMovies } from "../api/movie";
 import { useDispatch, useSelector } from "react-redux";
-import { setMovie } from "../store/movie/action";
+import { setList, setMovie } from "../store/movie/action";
 import { useState } from "react";
 import { RootState } from "../store/store";
 import { Movie } from "../helpers/interfaces/movie";
 import { formatDate } from "../helpers/functions/utils";
 
 export const useMovie = () => {
-  const movies = useSelector((state: RootState) => state.movie.list);
+  const list = useSelector((state: RootState) => state.movie.list);
+  const movie = useSelector((state: RootState) => state.movie.movie);
 
   const dispatch = useDispatch();
 
@@ -38,17 +39,32 @@ export const useMovie = () => {
       );
 
       setTotalPages(movieResponse.data.total_pages);
-      dispatch(setMovie(movieResponse.data.results));
+      dispatch(setList(movieResponse.data.results));
       setLoading(false);
     } catch (error) {
       toast.error("Erro ao buscar filmes");
     }
   };
 
+  const handleFetchMovieById = async (movie_id: string | undefined) => {
+    try {
+      if (movie_id) {
+        const movieResponse = await getMovieById(movie_id);
+        movieResponse.data.poster_path = `https://image.tmdb.org/t/p/w500${movieResponse.data.poster_path}`;
+        console.log(movieResponse.data);
+        dispatch(setMovie(movieResponse.data));
+      }
+    } catch (error) {
+      toast.error("Erro ao buscar informações do filme");
+    }
+  };
+
   return {
-    movies,
+    list,
+    movie,
     loading,
     pagination: { totalPages, currentPage },
     handleFetchAllMovies,
+    handleFetchMovieById,
   };
 };

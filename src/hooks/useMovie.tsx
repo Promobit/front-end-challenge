@@ -51,7 +51,6 @@ export const useMovie = () => {
       if (movie_id) {
         const movieResponse = await getMovieById(movie_id);
         movieResponse.data.poster_path = `https://image.tmdb.org/t/p/w500${movieResponse.data.poster_path}`;
-        console.log(movieResponse.data);
         dispatch(setMovie(movieResponse.data));
       }
     } catch (error) {

@@ -17,13 +17,14 @@ export const useMovie = () => {
   const [totalPages, setTotalPages] = useState(0);
 
   const handleFetchAllMovies = async (
-    genres_id: number[],
+    genres_id: string | null,
     page: number = 1
   ) => {
     try {
       setLoading(true);
       setCurrentPage(page);
-      const movieResponse = await getPopularMovies(genres_id, page);
+
+      const movieResponse = await getPopularMovies(genres_id?.split(","), page);
       if (movieResponse.status !== 200) {
         toast.error("Erro ao buscar Filmes!");
         return false;

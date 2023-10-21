@@ -1,7 +1,12 @@
 import { toast } from "react-toastify";
-import { getCreditsMovie, getMovieById, getPopularMovies } from "../api/movie";
+import {
+  getCreditsMovie,
+  getMovieById,
+  getPopularMovies,
+  getTrailerMovie,
+} from "../api/movie";
 import { useDispatch, useSelector } from "react-redux";
-import { setCast, setList, setMovie } from "../store/movie/action";
+import { setCast, setList, setMovie, setTrailer } from "../store/movie/action";
 import { useState } from "react";
 import { RootState } from "../store/store";
 import { Cast, Movie } from "../helpers/interfaces/movie";
@@ -15,6 +20,7 @@ export const useMovie = () => {
   const list = useSelector((state: RootState) => state.movie.list);
   const movie = useSelector((state: RootState) => state.movie.movie);
   const cast = useSelector((state: RootState) => state.movie.casts);
+  const trailer = useSelector((state: RootState) => state.movie.trailer);
 
   const dispatch = useDispatch();
 
@@ -103,14 +109,33 @@ export const useMovie = () => {
     }
   };
 
+  const handleFetchTrailerMovie = async (movie_id: string | undefined) => {
+    try {
+      if (movie_id) {
+        const trailerResponse = (await getTrailerMovie(movie_id)).data;
+        dispatch(
+          setTrailer(
+            trailerResponse.results.filter(
+              (video: any) => video.name === "Official Trailer"
+            )[0].key
+          )
+        );
+      }
+    } catch (error) {
+      toast.error("Erro ao buscar trailer!");
+    }
+  };
+
   return {
     list,
     movie,
     cast,
     loading,
+    trailer,
     pagination: { totalPages, currentPage },
     handleFetchAllMovies,
     handleFetchMovieById,
     handleFetchCast,
+    handleFetchTrailerMovie,
   };
 };

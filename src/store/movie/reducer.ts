@@ -1,9 +1,10 @@
 import { AnyAction } from "redux";
-import { SET_MOVIE, SET_LIST } from "./type";
+import { SET_MOVIE, SET_LIST, SET_CASTS } from "./type";
 
 const initialState = {
   list: [],
   movie: false,
+  casts: [],
 };
 
 export const movieReducer = (state = initialState, action: AnyAction) => {
@@ -17,6 +18,11 @@ export const movieReducer = (state = initialState, action: AnyAction) => {
       return {
         ...state,
         movie: action.payload,
+      };
+    case SET_CASTS:
+      return {
+        ...state,
+        casts: action.payload,
       };
     default:
       return state;

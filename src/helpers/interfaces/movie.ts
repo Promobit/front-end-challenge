@@ -15,6 +15,11 @@ export interface Movie {
   vote_count: number;
 }
 
+export interface Jobs {
+  name: string;
+  job: string;
+}
+
 export interface MovieDetail {
   adult: boolean;
   backdrop_path: string;
@@ -60,4 +65,5 @@ export interface MovieDetail {
   video: boolean;
   vote_average: number;
   vote_count: number;
+  jobs: Jobs[];
 }

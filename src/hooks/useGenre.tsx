@@ -10,7 +10,7 @@ export const useGenres = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const genres = useSelector((state: RootState) => state.genres.genres);
+  const genres = useSelector((state: RootState) => state.genre.list);
 
   const handleFetchGenres = async () => {
     try {

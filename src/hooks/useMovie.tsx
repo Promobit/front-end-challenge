@@ -132,6 +132,7 @@ export const useMovie = () => {
         );
       }
     } catch (error) {
+      dispatch(setTrailer(false));
       toast.error("Erro ao buscar trailer!");
     }
   };

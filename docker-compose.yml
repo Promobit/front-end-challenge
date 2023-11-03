@@ -1,0 +1,7 @@
+version: '1'
+
+services:
+  promobit-frontend-challenge:
+    image: gordinhodo/promobit-challenge
+    ports:
+      - "3000:3000"
